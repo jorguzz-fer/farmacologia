@@ -303,25 +303,50 @@ export default function LandingPageV3() {
                         </div>
 
                         <div className="lg:w-3/5 order-2 lg:order-2 space-y-8 text-center lg:text-left">
-                            <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a3e]">
-                                Com quem você vai aprender <br /> a <span className="text-[#0066FF]">investir na sua carreira</span>.
-                            </h2>
-                            <div className="space-y-4 text-lg text-slate-600 leading-relaxed">
+                            <div>
+                                <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a3e] mb-2">
+                                    Com quem você vai aprender <br /> a <span className="text-[#0066FF]">investir na sua carreira</span>.
+                                </h2>
+                                <p className="text-[#FF6B35] font-semibold text-lg">Dr. Adilson Kleber Ferreira</p>
+                                <p className="text-slate-500 text-sm">Farmacêutico-Bioquímico | Doutor em Fisiopatologia Experimental (FMUSP)</p>
+                            </div>
+
+                            <div className="space-y-4 text-base text-slate-600 leading-relaxed text-justify">
                                 <p>
-                                    <strong>Dr. Adilson Kleber Ferreira</strong> é farmacêutico-bioquímico, Doutor pela FMUSP e Acadêmico Titular da Academia Nacional de Farmácia.
+                                    <strong>Dr. Adilson Kleber Ferreira</strong> é farmacêutico-bioquímico, doutor em Fisiopatologia Experimental pela Faculdade de Medicina da Universidade de São Paulo (FMUSP), com trajetória científica consolidada em farmacologia experimental, biologia molecular, metabolismo celular e desenvolvimento racional de fármacos.
                                 </p>
                                 <p>
-                                    Com pós-doutorado na Holanda (Groningen) e vasta experiência no ICB-USP, sua carreira combina <strong>pesquisa de ponta</strong> em drug discovery com uma visão prática e aplicável.
+                                    Realizou formação científica no Brasil e no exterior, incluindo pesquisa de doutorado e pós-doutorado no <strong>University Medical Center Groningen (Holanda)</strong>, no Research Institute for Drug Exploration, com atuação em drug discovery, avaliação farmacológica de mecanismos de ação, design molecular e estudos pré-clínicos.
                                 </p>
                                 <p>
-                                    Diferente de cursos que apenas repetem bulas, aqui você terá acesso ao raciocínio de quem entende a molécula desde o design até a resposta clínica.
+                                    Atuou como pesquisador no Instituto de Ciências Biomédicas da USP (ICB-USP), desenvolvendo pesquisas em fisiopatologia sistêmica, inflamação crônica, metabolismo energético e farmacologia molecular, bases fundamentais para a compreensão moderna da obesidade como doença complexa, adaptativa e multifatorial.
+                                </p>
+                                <p>
+                                    É <strong>Acadêmico Titular da Academia Nacional de Farmácia</strong> (Cadeira nº 105) e Full Member da Sigma Xi – The Scientific Research Honor Society. Atua como revisor científico e membro de corpo editorial de periódicos internacionais nas áreas de farmacologia e drug discovery.
+                                </p>
+
+                                <div className="bg-slate-50 p-4 rounded-lg border-l-4 border-[#0066FF] text-left">
+                                    <p className="font-semibold text-[#1a1a3e] mb-2">Foco Científico em publicações internacionais:</p>
+                                    <ul className="grid sm:grid-cols-2 gap-2 text-sm">
+                                        <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#FF6B35]" /> Mecanismos farmacológicos</li>
+                                        <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#FF6B35]" /> Bioenergética celular</li>
+                                        <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#FF6B35]" /> Desenvolvimento de novos fármacos</li>
+                                        <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-[#FF6B35]" /> Farmacologia translacional</li>
+                                    </ul>
+                                </div>
+
+                                <p>
+                                    Sua atuação acadêmica é integrada à experiência prática em inovação e gestão em saúde, conferindo ao seu ensino uma abordagem crítica, técnica e orientada à decisão baseada em evidências, distante de simplificações, modismos ou discursos comerciais.
+                                </p>
+                                <p className="font-medium text-[#1a1a3e]">
+                                    No curso Farmacologia da Obesidade Moderna, Dr. Adilson conduz o aluno à compreensão profunda dos mecanismos que sustentam — e limitam — a farmacoterapia da obesidade.
                                 </p>
                             </div>
 
                             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start">
                                 <div className="px-6 py-3 bg-slate-50 rounded-lg border border-slate-200">
-                                    <span className="block text-2xl font-bold text-[#1a1a3e]">15+</span>
-                                    <span className="text-sm text-slate-500">Anos de Pesquisa</span>
+                                    <span className="block text-2xl font-bold text-[#1a1a3e]">ANF</span>
+                                    <span className="text-sm text-slate-500">Cadeira nº 105</span>
                                 </div>
                                 <div className="px-6 py-3 bg-slate-50 rounded-lg border border-slate-200">
                                     <span className="block text-2xl font-bold text-[#1a1a3e]">Ph.D</span>
