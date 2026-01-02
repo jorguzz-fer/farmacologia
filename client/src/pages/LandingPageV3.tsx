@@ -39,12 +39,12 @@ export default function LandingPageV3() {
         <div className="min-h-screen font-sans text-slate-900 overflow-x-hidden">
 
             {/* 1. HEADER/HERO SECTION */}
-            <section className="relative bg-slate-50 pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden">
+            <section className="relative bg-slate-50 pt-24 pb-16 lg:pt-40 lg:pb-32 overflow-hidden">
                 {/* Abstract Background Elements */}
                 <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-100/50 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3 z-0" />
                 <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#FF6B35]/5 rounded-full blur-3xl -translate-x-1/3 translate-y-1/3 z-0" />
 
-                <div className="container px-4 md:px-6 relative z-10">
+                <div className="container mx-auto px-4 md:px-6 relative z-10">
                     <div className="grid lg:grid-cols-12 gap-12 items-center">
 
                         {/* Left Column (50%) */}
@@ -52,7 +52,7 @@ export default function LandingPageV3() {
                             initial="hidden"
                             animate="visible"
                             variants={fadeInUp}
-                            className="lg:col-span-7 space-y-8"
+                            className="lg:col-span-7 space-y-8 text-center lg:text-left flex flex-col items-center lg:items-start"
                         >
                             <div className="inline-flex items-center gap-2 bg-blue-100 text-[#0066FF] px-4 py-1.5 rounded-full font-semibold text-sm tracking-wide uppercase">
                                 <Star className="w-4 h-4 fill-current" />
@@ -64,11 +64,11 @@ export default function LandingPageV3() {
                                 <span className="text-[#0066FF]">Obesidade Moderna</span>
                             </h1>
 
-                            <p className="text-xl text-slate-600 leading-relaxed max-w-xl">
+                            <p className="text-xl text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
                                 Uma aula para profissionais da saúde que já conhecem GLP-1 e tirzepatida, mas ainda não entenderam por que a resposta clínica falha em tantos casos.
                             </p>
 
-                            <div className="space-y-4 pt-4">
+                            <div className="space-y-4 pt-4 text-left inline-block">
                                 {[
                                     "Entenda a resistência leptínica",
                                     "Domine o manejo de efeitos adversos",
@@ -84,12 +84,12 @@ export default function LandingPageV3() {
                                 ))}
                             </div>
 
-                            <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                                <Button className="h-14 px-8 text-lg bg-[#FF6B35] hover:bg-[#E55A2B] text-white font-bold rounded-lg shadow-lg shadow-orange-500/20 transition-all hover:-translate-y-1">
+                            <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full sm:w-auto">
+                                <Button className="h-14 px-8 text-lg bg-[#FF6B35] hover:bg-[#E55A2B] text-white font-bold rounded-lg shadow-lg shadow-orange-500/20 transition-all hover:-translate-y-1 w-full sm:w-auto">
                                     COMEÇAR AGORA
                                     <ArrowRight className="ml-2 w-5 h-5" />
                                 </Button>
-                                <div className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg shadow-sm">
+                                <div className="flex items-center justify-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg shadow-sm w-full sm:w-auto">
                                     <ShieldCheck className="w-5 h-5 text-slate-400" />
                                     <span className="text-sm font-medium text-slate-600">Garantia de 7 dias</span>
                                 </div>
@@ -98,18 +98,19 @@ export default function LandingPageV3() {
 
                         {/* Right Column (Sales Card/Summary) */}
                         <motion.div
-                            initial={{ opacity: 0, x: 50 }}
-                            animate={{ opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: 0.2 }}
                             className="lg:col-span-5"
                         >
-                            <div className="bg-white rounded-2xl shadow-2xl p-8 border border-slate-100 relative">
+                            <div className="bg-white rounded-2xl shadow-2xl p-6 md:p-8 border border-slate-100 relative">
                                 {/* Badge */}
-                                <div className="absolute -top-4 right-8 bg-[#1a1a3e] text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-lg">
+                                <div className="absolute -top-4 right-1/2 translate-x-1/2 lg:right-8 lg:translate-x-0 bg-[#1a1a3e] text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-lg whitespace-nowrap">
                                     Oferta Especial
                                 </div>
 
-                                <div className="space-y-6">
+                                <div className="space-y-6 pt-4 lg:pt-0">
                                     <div className="text-center pb-6 border-b border-slate-100">
                                         <p className="text-slate-500 font-medium mb-1">Acesso imediato ao curso</p>
                                         <div className="flex items-baseline justify-center gap-1">
@@ -119,14 +120,14 @@ export default function LandingPageV3() {
                                     </div>
 
                                     <div className="space-y-4">
-                                        <div className="bg-blue-50 p-4 rounded-xl flex gap-4 items-start">
+                                        <div className="bg-blue-50 p-4 rounded-xl flex gap-4 items-start text-left">
                                             <Play className="w-6 h-6 text-[#0066FF] mt-1 shrink-0" />
                                             <div>
                                                 <h4 className="font-bold text-[#1a1a3e] text-sm md:text-base">Conteúdo 100% Online</h4>
                                                 <p className="text-xs md:text-sm text-slate-600">Assista quando e onde quiser, no seu próprio ritmo.</p>
                                             </div>
                                         </div>
-                                        <div className="bg-orange-50 p-4 rounded-xl flex gap-4 items-start">
+                                        <div className="bg-orange-50 p-4 rounded-xl flex gap-4 items-start text-left">
                                             <Award className="w-6 h-6 text-[#FF6B35] mt-1 shrink-0" />
                                             <div>
                                                 <h4 className="font-bold text-[#1a1a3e] text-sm md:text-base">Certificado e Material</h4>
@@ -152,7 +153,7 @@ export default function LandingPageV3() {
 
             {/* 2. SOCIAL PROOF / TARGET AUDIENCE */}
             <section className="py-10 border-y border-slate-100 bg-white">
-                <div className="container px-4">
+                <div className="container mx-auto px-4">
                     <p className="text-center text-slate-500 font-medium mb-8 uppercase tracking-widest text-sm">
                         Conteúdo essencial desenvolvido para
                     </p>
@@ -168,7 +169,7 @@ export default function LandingPageV3() {
 
             {/* 3. PARADIGM SHIFT (ZIGZAG) */}
             <section className="py-24 bg-white overflow-hidden">
-                <div className="container px-4 md:px-6">
+                <div className="container mx-auto px-4 md:px-6">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
 
                         {/* Image Side */}
@@ -176,7 +177,7 @@ export default function LandingPageV3() {
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="lg:w-1/2 relative"
+                            className="lg:w-1/2 relative w-full"
                         >
                             <div className="absolute inset-0 bg-[#0066FF]/10 rounded-3xl transform rotate-3 scale-105" />
                             <div className="relative bg-slate-100 rounded-3xl p-8 border border-slate-200">
@@ -214,7 +215,7 @@ export default function LandingPageV3() {
                         </motion.div>
 
                         {/* Text Side */}
-                        <div className="lg:w-1/2 space-y-6">
+                        <div className="lg:w-1/2 space-y-6 text-center lg:text-left">
                             <span className="text-[#0066FF] font-bold tracking-wider uppercase text-sm">Quebra de Paradigma</span>
                             <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a3e] leading-tight">
                                 O problema não é falta de fármaco. <br />
@@ -223,14 +224,14 @@ export default function LandingPageV3() {
                             <p className="text-lg text-slate-600 leading-relaxed">
                                 As "canetas" são ferramentas poderosas, mas sem entender a <strong>farmacologia adaptativa</strong> e a imunometabolismo, você está lutando contra a fisiologia com uma mão amarrada.
                             </p>
-                            <ul className="space-y-3 pt-4">
+                            <ul className="space-y-3 pt-4 inline-block text-left">
                                 {[
                                     "Por que alguns pacientes respondem muito bem e outros não?",
                                     "Por que o reganho de peso é tão frequente?",
                                     "Por que aumentar a dose nem sempre resolve?"
                                 ].map((item, i) => (
                                     <li key={i} className="flex items-center gap-3 text-slate-700">
-                                        <div className="w-2 h-2 rounded-full bg-[#FF6B35]" />
+                                        <div className="w-2 h-2 rounded-full bg-[#FF6B35] shrink-0" />
                                         {item}
                                     </li>
                                 ))}
@@ -243,7 +244,7 @@ export default function LandingPageV3() {
 
             {/* 4. MODULES / CURRICULUM (GRID) */}
             <section className="py-24 bg-slate-50">
-                <div className="container px-4 md:px-6">
+                <div className="container mx-auto px-4 md:px-6">
                     <div className="text-center max-w-3xl mx-auto mb-16">
                         <span className="text-[#FF6B35] font-bold tracking-wider uppercase text-sm">Conteúdo Programático</span>
                         <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a3e] mt-3 mb-6">
@@ -273,9 +274,9 @@ export default function LandingPageV3() {
                                 whileInView="visible"
                                 viewport={{ once: true }}
                                 variants={fadeInUp}
-                                className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow border border-slate-100 group"
+                                className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-shadow border border-slate-100 group text-center md:text-left"
                             >
-                                <div className="w-12 h-12 rounded-xl bg-blue-50 text-[#0066FF] flex items-center justify-center mb-6 group-hover:bg-[#0066FF] group-hover:text-white transition-colors">
+                                <div className="w-12 h-12 rounded-xl bg-blue-50 text-[#0066FF] flex items-center justify-center mb-6 group-hover:bg-[#0066FF] group-hover:text-white transition-colors mx-auto md:mx-0">
                                     <mod.icon className="w-6 h-6" />
                                 </div>
                                 <h3 className="text-xl font-bold text-[#1a1a3e] mb-3">{i + 1}. {mod.title}</h3>
@@ -288,9 +289,9 @@ export default function LandingPageV3() {
 
             {/* 5. MENTOR SECTION */}
             <section className="py-24 bg-white">
-                <div className="container px-4 md:px-6">
+                <div className="container mx-auto px-4 md:px-6">
                     <div className="flex flex-col lg:flex-row items-center gap-12">
-                        <div className="lg:w-2/5 md:order-2">
+                        <div className="lg:w-2/5 order-1 lg:order-1 w-full max-w-sm lg:max-w-none">
                             <div className="relative">
                                 <div className="absolute inset-0 bg-[#FF6B35] rounded-[2rem] transform translate-x-4 translate-y-4" />
                                 <img
@@ -301,7 +302,7 @@ export default function LandingPageV3() {
                             </div>
                         </div>
 
-                        <div className="lg:w-3/5 md:order-1 space-y-8">
+                        <div className="lg:w-3/5 order-2 lg:order-2 space-y-8 text-center lg:text-left">
                             <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a3e]">
                                 Com quem você vai aprender <br /> a <span className="text-[#0066FF]">investir na sua carreira</span>.
                             </h2>
@@ -317,7 +318,7 @@ export default function LandingPageV3() {
                                 </p>
                             </div>
 
-                            <div className="flex gap-4 pt-4">
+                            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start">
                                 <div className="px-6 py-3 bg-slate-50 rounded-lg border border-slate-200">
                                     <span className="block text-2xl font-bold text-[#1a1a3e]">15+</span>
                                     <span className="text-sm text-slate-500">Anos de Pesquisa</span>
@@ -337,7 +338,7 @@ export default function LandingPageV3() {
                 {/* Abstract Background */}
                 <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500 via-[#1a1a3e] to-[#1a1a3e]" />
 
-                <div className="container px-4 md:px-6 relative z-10 text-center max-w-4xl mx-auto">
+                <div className="container mx-auto px-4 md:px-6 relative z-10 text-center max-w-4xl mx-auto">
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
                         Pronto para transformar sua gestão clínica?
                     </h2>
