@@ -39,7 +39,7 @@ export default function LandingPageV3() {
         <div className="min-h-screen font-sans text-slate-900 overflow-x-hidden">
 
             {/* 1. HEADER/HERO SECTION */}
-            <section className="relative bg-slate-50 pt-24 pb-16 lg:pt-40 lg:pb-32 overflow-hidden">
+            <section className="relative bg-slate-50 pt-24 pb-16 lg:pt-40 lg:pb-20 overflow-hidden">
                 {/* Abstract Background Elements */}
                 <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-100/50 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3 z-0" />
                 <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#FF6B35]/5 rounded-full blur-3xl -translate-x-1/3 translate-y-1/3 z-0" />
@@ -152,14 +152,14 @@ export default function LandingPageV3() {
             </section>
 
             {/* 2. SOCIAL PROOF / TARGET AUDIENCE */}
-            <section className="py-10 border-y border-slate-100 bg-white">
+            <section className="py-10 border-y border-slate-200 bg-white">
                 <div className="container mx-auto px-4">
-                    <p className="text-center text-slate-500 font-medium mb-8 uppercase tracking-widest text-sm">
+                    <p className="text-center text-[#0066FF] font-bold mb-8 uppercase tracking-widest text-sm">
                         Conteúdo essencial desenvolvido para
                     </p>
-                    <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70 grayscale transition-all hover:grayscale-0">
+                    <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
                         {["Médicos", "Farmacêuticos", "Nutricionistas", "Biomédicos", "Estudantes"].map((role, i) => (
-                            <span key={i} className="text-xl md:text-2xl font-bold text-slate-300 hover:text-[#0066FF] cursor-default transition-colors">
+                            <span key={i} className="text-xl md:text-2xl font-bold text-slate-600 hover:text-[#0066FF] cursor-default transition-colors">
                                 {role}
                             </span>
                         ))}
@@ -236,6 +236,13 @@ export default function LandingPageV3() {
                                     </li>
                                 ))}
                             </ul>
+
+                            <div className="pt-8 w-full flex justify-center lg:justify-start">
+                                <Button className="h-12 px-8 text-lg bg-[#FF6B35] hover:bg-[#E55A2B] text-white font-bold rounded-full shadow-lg transition-transform hover:scale-105">
+                                    QUERO APRENDER A VERDADE
+                                    <ArrowRight className="ml-2 w-5 h-5" />
+                                </Button>
+                            </div>
                         </div>
 
                     </div>
@@ -283,6 +290,13 @@ export default function LandingPageV3() {
                                 <p className="text-slate-600 text-sm leading-relaxed">{mod.desc}</p>
                             </motion.div>
                         ))}
+                    </div>
+
+                    <div className="mt-16 text-center">
+                        <Button className="h-14 px-10 text-xl bg-[#0066FF] hover:bg-[#0052CC] text-white font-bold rounded-lg shadow-xl shadow-blue-500/20 transition-all hover:scale-105">
+                            QUERO DOMINAR A FARMACOLOGIA
+                            <ArrowRight className="ml-2 w-5 h-5" />
+                        </Button>
                     </div>
                 </div>
             </section>
@@ -343,14 +357,19 @@ export default function LandingPageV3() {
                                 </p>
                             </div>
 
-                            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start">
-                                <div className="px-6 py-3 bg-slate-50 rounded-lg border border-slate-200">
-                                    <span className="block text-2xl font-bold text-[#1a1a3e]">ANF</span>
-                                    <span className="text-sm text-slate-500">Cadeira nº 105</span>
-                                </div>
-                                <div className="px-6 py-3 bg-slate-50 rounded-lg border border-slate-200">
-                                    <span className="block text-2xl font-bold text-[#1a1a3e]">Ph.D</span>
-                                    <span className="text-sm text-slate-500">USP & Holanda</span>
+                            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start items-center">
+                                <Button className="h-12 px-8 text-lg bg-[#FF6B35] hover:bg-[#E55A2B] text-white font-bold rounded-full shadow-lg transition-transform hover:scale-105">
+                                    GARANTIR MINHA VAGA AGORA
+                                </Button>
+                                <div className="flex gap-4">
+                                    <div className="px-4 py-2 bg-slate-50 rounded-lg border border-slate-200">
+                                        <span className="block text-xl font-bold text-[#1a1a3e]">ANF</span>
+                                        <span className="text-xs text-slate-500">Cadeira 105</span>
+                                    </div>
+                                    <div className="px-4 py-2 bg-slate-50 rounded-lg border border-slate-200">
+                                        <span className="block text-xl font-bold text-[#1a1a3e]">Ph.D</span>
+                                        <span className="text-xs text-slate-500">USP & NL</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
