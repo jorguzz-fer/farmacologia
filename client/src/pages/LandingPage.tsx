@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
-import { 
-  Check, 
-  X, 
-  Stethoscope, 
-  Pill, 
-  Utensils, 
-  Microscope, 
-  Brain, 
-  GraduationCap, 
-  Activity, 
+import {
+  Check,
+  X,
+  Stethoscope,
+  Pill,
+  Utensils,
+  Microscope,
+  Brain,
+  GraduationCap,
+  Activity,
   AlertCircle,
   ArrowRight,
   ShieldCheck,
@@ -45,14 +45,14 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-background font-sans text-foreground overflow-x-hidden">
-      
+
       {/* 1. HERO SECTION */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden text-white py-20">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src={heroBg} 
-            alt="Fundo científico abstrato" 
+          <img
+            src={heroBg}
+            alt="Fundo científico abstrato"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-blue-900/80 to-purple-900/80 mix-blend-multiply" />
@@ -60,7 +60,7 @@ export default function LandingPage() {
         </div>
 
         <div className="container relative z-10 px-4 md:px-6">
-          <motion.div 
+          <motion.div
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
@@ -69,7 +69,7 @@ export default function LandingPage() {
             <motion.span variants={fadeIn} className="inline-block px-4 py-1.5 rounded-full bg-blue-500/20 border border-blue-400/30 text-blue-100 text-sm font-semibold tracking-wide backdrop-blur-sm">
               CURSO ONLINE EXCLUSIVO
             </motion.span>
-            
+
             <motion.h1 variants={fadeIn} className="text-4xl md:text-6xl lg:text-7xl font-bold font-heading leading-tight tracking-tight">
               Farmacologia da <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white">
@@ -88,9 +88,9 @@ export default function LandingPage() {
             </motion.div>
 
             <motion.div variants={fadeIn} className="pt-4">
-              <Button 
+              <Button
                 onClick={scrollToCheckout}
-                size="lg" 
+                size="lg"
                 className="bg-blue-600 hover:bg-blue-500 text-white font-bold text-lg px-8 py-8 rounded-full shadow-[0_0_40px_-10px_rgba(59,130,246,0.5)] transition-all hover:scale-105"
               >
                 Acessar o Curso por R$ 67
@@ -99,9 +99,9 @@ export default function LandingPage() {
             </motion.div>
           </motion.div>
         </div>
-        
+
         {/* Scroll Indicator */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
@@ -111,29 +111,35 @@ export default function LandingPage() {
         </motion.div>
       </section>
 
-      {/* 2. QUEBRA DE PARADIGMA */}
+      {/* 2. CHECKLIST DIAGNÓSTICO & CONTEXTO */}
       <section className="py-24 bg-white">
         <div className="container px-4 md:px-6">
-          <motion.div 
+
+          {/* Header */}
+          <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeIn}
             className="text-center mb-16 space-y-4"
           >
+            <span className="text-blue-600 font-bold tracking-wider uppercase text-sm">Reflexão Profissional</span>
             <h2 className="text-3xl md:text-5xl font-bold text-slate-900 font-heading">
-              Por que a farmacologia sozinha <br />
-              <span className="text-blue-600">não explica tudo?</span>
+              Faça este <span className="text-blue-600">breve diagnóstico</span> da sua prática:
             </h2>
             <div className="h-1 w-24 bg-blue-600 mx-auto rounded-full" />
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto pt-4">
+              Marque mentalmente quantas vezes você já se deparou com estas situações no consultório:
+            </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {/* Checklist Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20 max-w-5xl mx-auto">
             {[
-              "Por que alguns pacientes respondem muito bem e outros não?",
-              "Por que o reganho de peso é tão frequente?",
-              "Por que aumentar a dose nem sempre resolve?",
-              "Por que novas moléculas mais potentes ainda encontram limites?"
+              "O paciente perde 10kg com Ozempic/Mounjaro, mas estaciona (efeito platô) e você não sabe qual o próximo passo farmacológico.",
+              "Você prescreve a caneta, mas o paciente volta reclamando de náusea incontrolável ou perda de massa magra excessiva.",
+              "O paciente recupera todo o peso (efeito rebote) assim que tenta desmamar a medicação, gerando frustração.",
+              "Você sente que está apenas 'repassando receitas' de canetas sem entender a bioenergética profunda por trás delas."
             ].map((text, i) => (
               <motion.div
                 key={i}
@@ -141,34 +147,47 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-slate-50 border border-slate-100 p-8 rounded-2xl hover:shadow-lg transition-shadow"
+                className="bg-slate-50 border border-slate-200 p-6 rounded-2xl flex items-start gap-4 hover:border-blue-400 hover:shadow-md transition-all group"
               >
-                <div className="bg-blue-100 text-blue-700 w-10 h-10 rounded-full flex items-center justify-center mb-4 font-bold text-xl">?</div>
-                <p className="text-lg font-medium text-slate-800 leading-relaxed">{text}</p>
+                <div className="mt-1 min-w-[24px] min-h-[24px] relative">
+                  <div className="w-6 h-6 border-2 border-slate-300 rounded md:rounded-md group-hover:border-blue-500 transition-colors flex items-center justify-center bg-white">
+                    <Check className="w-4 h-4 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </div>
+                </div>
+                <p className="text-lg font-medium text-slate-700 leading-snug group-hover:text-slate-900 transition-colors">{text}</p>
               </motion.div>
             ))}
           </div>
 
-          <motion.div 
+          {/* Context / Pivot Section - "A Declaração Poderosa" */}
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="bg-slate-900 text-white p-8 md:p-12 rounded-3xl max-w-4xl mx-auto text-center shadow-2xl relative overflow-hidden"
+            className="bg-slate-900 text-white p-8 md:p-12 rounded-3xl max-w-4xl mx-auto shadow-2xl relative overflow-hidden text-center md:text-left flex flex-col md:flex-row items-center gap-8"
           >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-            
-            <div className="relative z-10 space-y-6">
-              <p className="text-2xl md:text-3xl font-semibold">
-                <span className="text-blue-400 mr-2">👉</span> O problema não é falta de fármaco.
+            {/* Abstract Blur */}
+            <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500/20 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+
+            <div className="md:w-1/3 flex flex-col items-center">
+              <div className="w-24 h-24 md:w-32 md:h-32 bg-blue-800 rounded-full flex items-center justify-center mb-4 ring-4 ring-blue-700/50">
+                <AlertCircle className="w-10 h-10 md:w-14 md:h-14 text-blue-200" />
+              </div>
+            </div>
+
+            <div className="md:w-2/3 relative z-10 space-y-4">
+              <h3 className="text-xl md:text-2xl font-bold text-blue-100">
+                Se você marcou "SIM" para qualquer um desses pontos...
+              </h3>
+              <p className="text-slate-300 text-lg leading-relaxed">
+                A culpa não é sua, nem necessariamente da falta de disciplina do paciente. <strong className="text-white">O problema é que a obesidade não é uma conta matemática, é uma guerra biológica.</strong>
               </p>
-              <p className="text-2xl md:text-3xl font-semibold">
-                <span className="text-blue-400 mr-2">👉</span> O problema não é falta de entendimento do fenômeno biológico.
-              </p>
-              <p className="text-lg text-slate-300 mt-8 font-light">
-                Este conteúdo foi criado para corrigir esse raciocínio.
+              <p className="text-slate-300 text-lg leading-relaxed">
+                As "canetas" são ferramentas poderosas, mas sem entender a <span className="text-blue-400 font-semibold">farmacologia adaptativa</span> e a <span className="text-blue-400 font-semibold">imunometabolismo</span>, você está lutando contra a fisiologia com uma mão amarrada. Este curso existe para desatar esse nó.
               </p>
             </div>
           </motion.div>
+
         </div>
       </section>
 
@@ -177,7 +196,7 @@ export default function LandingPage() {
         <div className="container px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-8 lg:gap-16">
             {/* NÃO É */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -205,7 +224,7 @@ export default function LandingPage() {
             </motion.div>
 
             {/* É */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -295,7 +314,7 @@ export default function LandingPage() {
                 "O impacto da perda de massa magra no fracasso terapêutico",
                 "Para onde caminha a farmacologia com os agonistas triplos"
               ].map((item, i) => (
-                <motion.div 
+                <motion.div
                   key={i}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -395,14 +414,14 @@ export default function LandingPage() {
           </Accordion>
 
           <div className="mt-12 text-center">
-             <Button 
-                onClick={scrollToCheckout}
-                size="lg" 
-                className="bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-6 rounded-full shadow-lg transition-transform hover:scale-105"
-              >
-                Quero acessar o conteúdo completo
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+            <Button
+              onClick={scrollToCheckout}
+              size="lg"
+              className="bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-6 rounded-full shadow-lg transition-transform hover:scale-105"
+            >
+              Quero acessar o conteúdo completo
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
         </div>
       </section>
@@ -412,24 +431,24 @@ export default function LandingPage() {
         <div className="container px-4 md:px-6">
           <div className="bg-white rounded-[2rem] p-8 md:p-12 shadow-xl border border-slate-100">
             <div className="grid md:grid-cols-12 gap-12 items-start">
-              
+
               {/* Image Column */}
               <div className="md:col-span-4 lg:col-span-3 flex flex-col items-center">
                 <div className="relative w-full max-w-[300px] aspect-square rounded-2xl overflow-hidden mb-6 shadow-2xl">
-                  <img 
-                    src={mentorPhoto} 
-                    alt="Dr. Adilson Kleber Ferreira" 
+                  <img
+                    src={mentorPhoto}
+                    alt="Dr. Adilson Kleber Ferreira"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent opacity-60" />
                 </div>
-                
+
                 <div className="space-y-2 w-full">
-                   <div className="bg-slate-100 rounded-lg p-3 text-center">
-                      <span className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Acadêmico Titular</span>
-                      <span className="font-bold text-slate-800 leading-tight">Academia Nacional de Farmácia</span>
-                      <span className="block text-xs text-slate-400 mt-1">Cadeira nº 105</span>
-                   </div>
+                  <div className="bg-slate-100 rounded-lg p-3 text-center">
+                    <span className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Acadêmico Titular</span>
+                    <span className="font-bold text-slate-800 leading-tight">Academia Nacional de Farmácia</span>
+                    <span className="block text-xs text-slate-400 mt-1">Cadeira nº 105</span>
+                  </div>
                 </div>
               </div>
 
@@ -439,7 +458,7 @@ export default function LandingPage() {
                   <h3 className="text-sm font-bold text-blue-600 uppercase tracking-widest mb-2">Conheça seu mentor</h3>
                   <h2 className="text-3xl md:text-4xl font-bold text-slate-900 font-heading mb-2">Dr. Adilson Kleber Ferreira</h2>
                   <p className="text-blue-700 font-medium text-lg leading-relaxed mb-6">
-                    Farmacêutico-Bioquímico | Doutor em Fisiopatologia Experimental (FMUSP) <br/>
+                    Farmacêutico-Bioquímico | Doutor em Fisiopatologia Experimental (FMUSP) <br />
                     <span className="text-slate-500 text-base font-normal">Pesquisador em Farmacologia Translacional, Metabolismo e Desenvolvimento Racional de Fármacos</span>
                   </p>
                   <div className="w-20 h-1.5 bg-blue-600 rounded-full" />
@@ -449,7 +468,7 @@ export default function LandingPage() {
                   <p>
                     Dr. Adilson Kleber Ferreira é farmacêutico-bioquímico, doutor em Fisiopatologia Experimental pela Faculdade de Medicina da Universidade de São Paulo (FMUSP), com trajetória científica consolidada em farmacologia experimental, biologia molecular, metabolismo celular e desenvolvimento racional de fármacos.
                   </p>
-                  
+
                   <p>
                     Realizou formação científica no Brasil e no exterior, incluindo pesquisa de doutorado e pós-doutorado no <strong>University Medical Center Groningen (Holanda)</strong>, no Research Institute for Drug Exploration, com atuação em drug discovery, avaliação farmacológica de mecanismos de ação, design molecular e estudos pré-clínicos.
                   </p>
@@ -500,91 +519,91 @@ export default function LandingPage() {
 
       {/* 8. PREÇO / INVESTIMENTO */}
       <section id="pricing" className="py-20 bg-gradient-to-br from-slate-900 to-blue-900 text-white relative overflow-hidden">
-         {/* Decorative circles */}
-         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl" />
-         <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-purple-500/10 rounded-full blur-3xl" />
+        {/* Decorative circles */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-purple-500/10 rounded-full blur-3xl" />
 
-         <div className="container px-4 md:px-6 relative z-10 text-center">
-            
-            <div className="flex flex-wrap justify-center gap-6 mb-12 text-blue-100">
-               <div className="flex items-center gap-2">
-                  <PlayCircle className="w-5 h-5" />
-                  <span>Conteúdo gravado</span>
-               </div>
-               <div className="flex items-center gap-2">
-                  <Clock className="w-5 h-5" />
-                  <span>Acesso imediato</span>
-               </div>
-               <div className="flex items-center gap-2">
-                  <Infinity className="w-5 h-5" />
-                  <span>Acesso contínuo</span>
-               </div>
+        <div className="container px-4 md:px-6 relative z-10 text-center">
+
+          <div className="flex flex-wrap justify-center gap-6 mb-12 text-blue-100">
+            <div className="flex items-center gap-2">
+              <PlayCircle className="w-5 h-5" />
+              <span>Conteúdo gravado</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Clock className="w-5 h-5" />
+              <span>Acesso imediato</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Infinity className="w-5 h-5" />
+              <span>Acesso contínuo</span>
+            </div>
+          </div>
+
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            className="bg-white text-slate-900 max-w-lg mx-auto rounded-3xl p-8 md:p-12 shadow-2xl relative"
+          >
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-purple-600 text-white px-6 py-1.5 rounded-full text-sm font-bold shadow-lg whitespace-nowrap">
+              OFERTA ESPECIAL
             </div>
 
-            <motion.div 
-               initial={{ scale: 0.9, opacity: 0 }}
-               whileInView={{ scale: 1, opacity: 1 }}
-               viewport={{ once: true }}
-               className="bg-white text-slate-900 max-w-lg mx-auto rounded-3xl p-8 md:p-12 shadow-2xl relative"
-            >
-               <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-purple-600 text-white px-6 py-1.5 rounded-full text-sm font-bold shadow-lg whitespace-nowrap">
-                  OFERTA ESPECIAL
-               </div>
+            <h3 className="text-lg text-slate-500 font-medium mb-2 uppercase tracking-wide">Investimento Único</h3>
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <span className="text-slate-400 text-xl line-through">R$ 297</span>
+            </div>
+            <div className="flex items-center justify-center text-6xl md:text-8xl font-bold text-slate-900 tracking-tighter mb-8 font-heading">
+              <span className="text-2xl md:text-4xl align-top mt-4 mr-1">R$</span>
+              67
+            </div>
 
-               <h3 className="text-lg text-slate-500 font-medium mb-2 uppercase tracking-wide">Investimento Único</h3>
-               <div className="flex items-center justify-center gap-2 mb-2">
-                 <span className="text-slate-400 text-xl line-through">R$ 297</span>
-               </div>
-               <div className="flex items-center justify-center text-6xl md:text-8xl font-bold text-slate-900 tracking-tighter mb-8 font-heading">
-                  <span className="text-2xl md:text-4xl align-top mt-4 mr-1">R$</span>
-                  67
-               </div>
+            <Button size="lg" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-xl h-16 rounded-xl shadow-xl transition-all hover:scale-[1.02]">
+              Acessar Agora
+              <ArrowRight className="ml-2 w-6 h-6" />
+            </Button>
 
-               <Button size="lg" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold text-xl h-16 rounded-xl shadow-xl transition-all hover:scale-[1.02]">
-                  Acessar Agora
-                  <ArrowRight className="ml-2 w-6 h-6" />
-               </Button>
-               
-               <p className="mt-4 text-slate-400 text-sm flex items-center justify-center gap-2">
-                  <ShieldCheck className="w-4 h-4" /> Pagamento 100% Seguro
-               </p>
-            </motion.div>
-         </div>
+            <p className="mt-4 text-slate-400 text-sm flex items-center justify-center gap-2">
+              <ShieldCheck className="w-4 h-4" /> Pagamento 100% Seguro
+            </p>
+          </motion.div>
+        </div>
       </section>
 
       {/* 9. GARANTIA */}
       <section className="py-16 bg-white border-t border-slate-100">
-         <div className="container px-4 md:px-6">
-            <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-8 bg-slate-50 p-8 rounded-2xl border-2 border-slate-100 border-dashed">
-               <div className="shrink-0">
-                  <div className="w-20 h-20 bg-slate-900 rounded-full flex items-center justify-center">
-                     <ShieldCheck className="w-10 h-10 text-white" />
-                  </div>
-               </div>
-               <div className="text-center md:text-left">
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">7 Dias de Garantia Incondicional</h3>
-                  <p className="text-slate-600">
-                     Se este conteúdo não elevar seu entendimento sobre a farmacologia da obesidade, o valor é devolvido integralmente. Sem perguntas.
-                  </p>
-               </div>
+        <div className="container px-4 md:px-6">
+          <div className="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-8 bg-slate-50 p-8 rounded-2xl border-2 border-slate-100 border-dashed">
+            <div className="shrink-0">
+              <div className="w-20 h-20 bg-slate-900 rounded-full flex items-center justify-center">
+                <ShieldCheck className="w-10 h-10 text-white" />
+              </div>
             </div>
-         </div>
+            <div className="text-center md:text-left">
+              <h3 className="text-xl font-bold text-slate-900 mb-2">7 Dias de Garantia Incondicional</h3>
+              <p className="text-slate-600">
+                Se este conteúdo não elevar seu entendimento sobre a farmacologia da obesidade, o valor é devolvido integralmente. Sem perguntas.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* 10. CTA FINAL & FOOTER */}
       <section className="py-20 bg-slate-900 text-white text-center">
-         <div className="container px-4 md:px-6">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 font-heading">Pronto para dominar a nova fronteira?</h2>
-            
-            <Button size="lg" onClick={scrollToCheckout} className="bg-blue-600 hover:bg-blue-500 text-white font-bold text-lg px-10 py-8 rounded-full shadow-lg transition-transform hover:scale-105 mb-4">
-               Acessar Farmacologia da Obesidade Moderna
-               <ArrowRight className="ml-2 h-6 w-6" />
-            </Button>
+        <div className="container px-4 md:px-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 font-heading">Pronto para dominar a nova fronteira?</h2>
 
-            <p className="text-slate-400 text-sm">
-               Dr. Kleber Ferreira © {new Date().getFullYear()} • Todos os direitos reservados.
-            </p>
-         </div>
+          <Button size="lg" onClick={scrollToCheckout} className="bg-blue-600 hover:bg-blue-500 text-white font-bold text-lg px-10 py-8 rounded-full shadow-lg transition-transform hover:scale-105 mb-4">
+            Acessar Farmacologia da Obesidade Moderna
+            <ArrowRight className="ml-2 h-6 w-6" />
+          </Button>
+
+          <p className="text-slate-400 text-sm">
+            Dr. Kleber Ferreira © {new Date().getFullYear()} • Todos os direitos reservados.
+          </p>
+        </div>
       </section>
 
     </div>
