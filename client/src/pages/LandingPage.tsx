@@ -418,7 +418,7 @@ export default function LandingPage() {
                 <div className="relative w-full max-w-[300px] aspect-square rounded-2xl overflow-hidden mb-6 shadow-2xl">
                   <img 
                     src={mentorPhoto} 
-                    alt="Dr. Kleber Ferreira" 
+                    alt="Dr. Adilson Kleber Ferreira" 
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent opacity-60" />
@@ -426,8 +426,9 @@ export default function LandingPage() {
                 
                 <div className="space-y-2 w-full">
                    <div className="bg-slate-100 rounded-lg p-3 text-center">
-                      <span className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Empresário</span>
-                      <span className="font-bold text-slate-800">Alchemypet & BioMedDNA</span>
+                      <span className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Acadêmico Titular</span>
+                      <span className="font-bold text-slate-800 leading-tight">Academia Nacional de Farmácia</span>
+                      <span className="block text-xs text-slate-400 mt-1">Cadeira nº 105</span>
                    </div>
                 </div>
               </div>
@@ -436,45 +437,58 @@ export default function LandingPage() {
               <div className="md:col-span-8 lg:col-span-9 space-y-8">
                 <div>
                   <h3 className="text-sm font-bold text-blue-600 uppercase tracking-widest mb-2">Conheça seu mentor</h3>
-                  <h2 className="text-4xl font-bold text-slate-900 font-heading mb-6">Dr. Kleber Ferreira</h2>
+                  <h2 className="text-3xl md:text-4xl font-bold text-slate-900 font-heading mb-2">Dr. Adilson Kleber Ferreira</h2>
+                  <p className="text-blue-700 font-medium text-lg leading-relaxed mb-6">
+                    Farmacêutico-Bioquímico | Doutor em Fisiopatologia Experimental (FMUSP) <br/>
+                    <span className="text-slate-500 text-base font-normal">Pesquisador em Farmacologia Translacional, Metabolismo e Desenvolvimento Racional de Fármacos</span>
+                  </p>
                   <div className="w-20 h-1.5 bg-blue-600 rounded-full" />
                 </div>
 
                 <div className="prose prose-lg text-slate-600 space-y-6">
                   <p>
-                    <span className="font-semibold text-slate-900">Comecei do zero.</span> Depois de quase 18 anos construindo negócios, minhas empresas faturam mais de <span className="text-blue-700 font-bold bg-blue-50 px-1 rounded">R$ 200 milhões</span> em valor gerado para clientes e para mim. Não foi por sorte. Foi por método. Implementação. E ciência aplicada de verdade.
+                    Dr. Adilson Kleber Ferreira é farmacêutico-bioquímico, doutor em Fisiopatologia Experimental pela Faculdade de Medicina da Universidade de São Paulo (FMUSP), com trajetória científica consolidada em farmacologia experimental, biologia molecular, metabolismo celular e desenvolvimento racional de fármacos.
                   </p>
                   
                   <p>
-                    Não sou apenas um "professor de internet". Sou um profissional de campo, de laboratório e de mesa de reunião.
+                    Realizou formação científica no Brasil e no exterior, incluindo pesquisa de doutorado e pós-doutorado no <strong>University Medical Center Groningen (Holanda)</strong>, no Research Institute for Drug Exploration, com atuação em drug discovery, avaliação farmacológica de mecanismos de ação, design molecular e estudos pré-clínicos.
                   </p>
 
-                  <div className="grid sm:grid-cols-2 gap-4 my-8">
-                    {[
-                      "Farmacêutico-Bioquímico (USP)",
-                      "Mestre em Fármacos e Medicamentos (USP)",
-                      "Reconhecido pelo DNA USP",
-                      "Acadêmico titular da Academia Nacional de Farmácia"
-                    ].map((cred, i) => (
-                      <div key={i} className="flex items-center gap-3 bg-slate-50 p-3 rounded-lg border border-slate-100">
-                        <ShieldCheck className="w-5 h-5 text-purple-600 shrink-0" />
-                        <span className="text-sm font-medium text-slate-800">{cred}</span>
-                      </div>
-                    ))}
+                  <p>
+                    Atuou como pesquisador no Instituto de Ciências Biomédicas da USP (ICB-USP), desenvolvendo pesquisas em fisiopatologia sistêmica, inflamação crônica, metabolismo energético e farmacologia molecular, bases fundamentais para a compreensão moderna da obesidade como doença complexa, adaptativa e multifatorial.
+                  </p>
+
+                  <p>
+                    É <strong>Acadêmico Titular da Academia Nacional de Farmácia (Cadeira nº 105)</strong> e Full Member da Sigma Xi – The Scientific Research Honor Society. Atua como revisor científico e membro de corpo editorial de periódicos internacionais nas áreas de farmacologia e drug discovery, além de avaliador de projetos científicos para agências de fomento como FAPESP e CNPq.
+                  </p>
+
+                  <div className="bg-slate-50 p-6 rounded-xl border border-slate-100">
+                    <p className="font-semibold text-slate-800 mb-4">
+                      É autor e coautor de artigos em periódicos de alto impacto (British Journal of Cancer, Biomedicine & Pharmacotherapy, etc), com foco em:
+                    </p>
+                    <ul className="grid sm:grid-cols-2 gap-3 list-none pl-0">
+                      {[
+                        "Mecanismos farmacológicos e bioenergética celular",
+                        "Desenvolvimento e avaliação de novos fármacos",
+                        "Reposicionamento terapêutico",
+                        "Farmacologia translacional e toxicidade"
+                      ].map((item, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <Check className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
+                          <span className="text-sm">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
 
-                  <div className="bg-blue-900 text-white p-6 rounded-xl shadow-lg transform md:-ml-4 border-l-4 border-purple-400">
-                    <p className="font-medium text-lg mb-4 opacity-90">Mas aqui está o que importa:</p>
-                    <div className="grid sm:grid-cols-2 gap-6">
-                      <div>
-                        <span className="block text-3xl font-bold text-blue-200">R$ 200 Mi+</span>
-                        <span className="text-sm text-blue-100">Valor estruturado para clientes</span>
-                      </div>
-                      <div>
-                        <span className="block text-3xl font-bold text-purple-300">R$ 80 Mi+</span>
-                        <span className="text-sm text-blue-100">Faturamento acumulado das empresas</span>
-                      </div>
-                    </div>
+                  <p>
+                    Sua atuação acadêmica é integrada à experiência prática em inovação e gestão em saúde, conferindo ao seu ensino uma abordagem crítica, técnica e orientada à decisão baseada em evidências, distante de simplificações, modismos ou discursos comerciais.
+                  </p>
+
+                  <div className="bg-blue-900 text-white p-6 rounded-xl shadow-lg border-l-4 border-blue-400">
+                    <p className="font-medium text-lg italic opacity-90">
+                      "No curso <strong>Farmacologia da Obesidade Moderna</strong>, conduzo o aluno à compreensão profunda dos mecanismos que sustentam — e limitam — a farmacoterapia da obesidade."
+                    </p>
                   </div>
                 </div>
               </div>
