@@ -39,108 +39,108 @@ export default function LandingPageV3() {
         <div className="min-h-screen font-sans text-slate-900 overflow-x-hidden">
 
             {/* 1. HEADER/HERO SECTION */}
-            <section className="relative bg-slate-50 pt-24 pb-16 lg:pt-40 lg:pb-20 overflow-hidden">
+            <section className="relative bg-slate-50 pt-16 pb-12 lg:pt-32 lg:pb-20 overflow-hidden">
                 {/* Abstract Background Elements */}
                 <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-blue-100/50 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3 z-0" />
                 <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#FF6B35]/5 rounded-full blur-3xl -translate-x-1/3 translate-y-1/3 z-0" />
 
                 <div className="container mx-auto px-4 md:px-6 relative z-10">
-                    <div className="grid lg:grid-cols-12 gap-12 items-center">
+                    <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 items-center max-w-7xl mx-auto">
 
-                        {/* Left Column (50%) */}
+                        {/* Left Column (Text) */}
                         <motion.div
                             initial="hidden"
                             animate="visible"
                             variants={fadeInUp}
-                            className="lg:col-span-7 space-y-8 text-center lg:text-left flex flex-col items-center lg:items-start"
+                            className="lg:col-span-7 space-y-6 text-center lg:text-left flex flex-col items-center lg:items-start"
                         >
-                            <div className="inline-flex items-center gap-2 bg-blue-100 text-[#0066FF] px-4 py-1.5 rounded-full font-semibold text-sm tracking-wide uppercase">
-                                <Star className="w-4 h-4 fill-current" />
+                            <div className="inline-flex items-center gap-2 bg-blue-100 text-[#0066FF] px-3 py-1 rounded-full font-semibold text-xs tracking-wide uppercase">
+                                <Star className="w-3 h-3 fill-current" />
                                 Curso Online Exclusivo
                             </div>
 
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#1a1a3e] leading-[1.1]">
+                            <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-[#1a1a3e] leading-[1.1] tracking-tight">
                                 Farmacologia da <br />
                                 <span className="text-[#0066FF]">Obesidade Moderna</span>
                             </h1>
 
-                            <p className="text-xl text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                            <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
                                 Uma aula para profissionais da saúde que já conhecem GLP-1 e tirzepatida, mas ainda não entenderam por que a resposta clínica falha em tantos casos.
                             </p>
 
-                            <div className="space-y-4 pt-4 text-left inline-block">
+                            <div className="space-y-3 pt-2 text-left inline-block w-full max-w-md lg:max-w-none">
                                 {[
                                     "Entenda a resistência leptínica",
                                     "Domine o manejo de efeitos adversos",
                                     "Evite o efeito platô e rebote",
                                     "Prescrição ética e baseada em fenótipo"
                                 ].map((item, i) => (
-                                    <div key={i} className="flex items-center gap-3">
-                                        <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 flex items-center justify-center">
-                                            <Check className="w-4 h-4 text-green-600" />
+                                    <div key={i} className="flex items-start gap-3">
+                                        <div className="flex-shrink-0 w-5 h-5 mt-0.5 rounded-full bg-green-100 flex items-center justify-center">
+                                            <Check className="w-3 h-3 text-green-600" />
                                         </div>
-                                        <span className="text-lg text-slate-700 font-medium">{item}</span>
+                                        <span className="text-base text-slate-700 font-medium leading-snug">{item}</span>
                                     </div>
                                 ))}
                             </div>
 
                             <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full sm:w-auto">
-                                <Button className="h-14 px-8 text-lg bg-[#FF6B35] hover:bg-[#E55A2B] text-white font-bold rounded-lg shadow-lg shadow-orange-500/20 transition-all hover:-translate-y-1 w-full sm:w-auto">
+                                <Button className="h-12 md:h-14 px-8 text-lg bg-[#FF6B35] hover:bg-[#E55A2B] text-white font-bold rounded-lg shadow-lg shadow-orange-500/20 transition-all hover:-translate-y-1 w-full sm:w-auto">
                                     COMEÇAR AGORA
                                     <ArrowRight className="ml-2 w-5 h-5" />
                                 </Button>
-                                <div className="flex items-center justify-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg shadow-sm w-full sm:w-auto">
+                                <div className="flex items-center justify-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg shadow-sm w-full sm:w-auto h-12 md:h-14">
                                     <ShieldCheck className="w-5 h-5 text-slate-400" />
                                     <span className="text-sm font-medium text-slate-600">Garantia de 7 dias</span>
                                 </div>
                             </div>
                         </motion.div>
 
-                        {/* Right Column (Sales Card/Summary) */}
+                        {/* Right Column (Sales Card) */}
                         <motion.div
-                            initial={{ opacity: 0, y: 50 }}
+                            initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="lg:col-span-5"
+                            className="lg:col-span-5 w-full max-w-md mx-auto lg:max-w-none"
                         >
-                            <div className="bg-white rounded-2xl shadow-2xl p-6 md:p-8 border border-slate-100 relative">
+                            <div className="bg-white rounded-2xl shadow-xl p-6 border border-slate-100 relative mt-8 lg:mt-0">
                                 {/* Badge */}
-                                <div className="absolute -top-4 right-1/2 translate-x-1/2 lg:right-8 lg:translate-x-0 bg-[#1a1a3e] text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-lg whitespace-nowrap">
+                                <div className="absolute -top-3 right-1/2 translate-x-1/2 lg:right-6 lg:translate-x-0 bg-[#1a1a3e] text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg whitespace-nowrap z-20">
                                     Oferta Especial
                                 </div>
 
-                                <div className="space-y-6 pt-4 lg:pt-0">
-                                    <div className="text-center pb-6 border-b border-slate-100">
-                                        <p className="text-slate-500 font-medium mb-1">Acesso imediato ao curso</p>
-                                        <div className="flex items-baseline justify-center gap-1">
-                                            <span className="text-xl text-slate-400 font-medium line-through">R$ 197</span>
-                                            <span className="text-5xl font-extrabold text-[#0066FF]">R$ 67</span>
+                                <div className="space-y-5">
+                                    <div className="text-center pb-5 border-b border-slate-100">
+                                        <p className="text-slate-500 font-medium mb-1 text-sm">Acesso imediato ao curso</p>
+                                        <div className="flex items-baseline justify-center gap-2">
+                                            <span className="text-lg text-slate-400 font-medium line-through">R$ 197</span>
+                                            <span className="text-4xl md:text-5xl font-extrabold text-[#0066FF]">R$ 67</span>
                                         </div>
                                     </div>
 
-                                    <div className="space-y-4">
-                                        <div className="bg-blue-50 p-4 rounded-xl flex gap-4 items-start text-left">
-                                            <Play className="w-6 h-6 text-[#0066FF] mt-1 shrink-0" />
+                                    <div className="space-y-3">
+                                        <div className="bg-blue-50 p-3 rounded-xl flex gap-3 items-start text-left">
+                                            <Play className="w-5 h-5 text-[#0066FF] mt-0.5 shrink-0" />
                                             <div>
-                                                <h4 className="font-bold text-[#1a1a3e] text-sm md:text-base">Conteúdo 100% Online</h4>
-                                                <p className="text-xs md:text-sm text-slate-600">Assista quando e onde quiser, no seu próprio ritmo.</p>
+                                                <h4 className="font-bold text-[#1a1a3e] text-sm">Conteúdo 100% Online</h4>
+                                                <p className="text-xs text-slate-600 leading-tight">Assista quando e onde quiser.</p>
                                             </div>
                                         </div>
-                                        <div className="bg-orange-50 p-4 rounded-xl flex gap-4 items-start text-left">
-                                            <Award className="w-6 h-6 text-[#FF6B35] mt-1 shrink-0" />
+                                        <div className="bg-orange-50 p-3 rounded-xl flex gap-3 items-start text-left">
+                                            <Award className="w-5 h-5 text-[#FF6B35] mt-0.5 shrink-0" />
                                             <div>
-                                                <h4 className="font-bold text-[#1a1a3e] text-sm md:text-base">Certificado e Material</h4>
-                                                <p className="text-xs md:text-sm text-slate-600">Acesso vitalício ao material de apoio e atualizações.</p>
+                                                <h4 className="font-bold text-[#1a1a3e] text-sm">Certificado e Material</h4>
+                                                <p className="text-xs text-slate-600 leading-tight">Acesso vitalício ao material.</p>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <Button className="w-full h-14 text-lg bg-[#0066FF] hover:bg-[#0052CC] text-white font-bold rounded-lg shadow-xl shadow-blue-500/20 transition-all hover:scale-[1.02]">
+                                    <Button className="w-full h-12 text-base md:text-lg bg-[#0066FF] hover:bg-[#0052CC] text-white font-bold rounded-lg shadow-lg shadow-blue-500/20 transition-all hover:scale-[1.02]">
                                         QUERO TRANSFORMAR MINHA PRÁTICA
                                     </Button>
 
-                                    <p className="text-center text-xs text-slate-400">
+                                    <p className="text-center text-[10px] text-slate-400 uppercase tracking-wide">
                                         Pagamento seguro via Cartão ou PIX
                                     </p>
                                 </div>
