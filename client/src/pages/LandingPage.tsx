@@ -20,7 +20,7 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import heroBg from "@assets/generated_images/abstract_scientific_background_with_blue_and_purple_gradients.png";
-import mentorPhoto from "@assets/generated_images/professional_headshot_of_a_male_doctor.png";
+import mentorPhoto from "@assets/generated_images/dr_kleber_real.png";
 
 // Animation variants
 const fadeIn = {
@@ -147,7 +147,7 @@ export default function LandingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-slate-50 border border-slate-200 p-6 rounded-2xl flex items-start gap-4 hover:border-blue-400 hover:shadow-md transition-all group"
+                className="bg-slate-50 border border-slate-200 p-6 rounded-2xl flex items-start gap-4 hover:border-blue-400 hover:shadow-md transition-all group h-full"
               >
                 <div className="mt-1 min-w-[24px] min-h-[24px] relative">
                   <div className="w-6 h-6 border-2 border-slate-300 rounded md:rounded-md group-hover:border-blue-500 transition-colors flex items-center justify-center bg-white">
