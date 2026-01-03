@@ -7,6 +7,7 @@ import NotFound from "@/pages/not-found";
 import LandingPage from "@/pages/LandingPage";
 import LandingPageV2 from "@/pages/LandingPageV2";
 import LandingPageV3 from "@/pages/LandingPageV3";
+import LandingPageV5 from "@/pages/LandingPageV5";
 
 function Router() {
   return (
@@ -16,6 +17,7 @@ function Router() {
       <Route path="/v2" component={LandingPageV2} />
       <Route path="/v3" component={LandingPageV3} />
       <Route path="/v4" component={LandingPageV3} />
+      <Route path="/v5" component={LandingPageV5} />
       <Route component={NotFound} />
     </Switch>
   );
