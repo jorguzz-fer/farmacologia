@@ -15,6 +15,7 @@ function Router() {
       <Route path="/v1" component={LandingPage} />
       <Route path="/v2" component={LandingPageV2} />
       <Route path="/v3" component={LandingPageV3} />
+      <Route path="/v4" component={LandingPageV3} />
       <Route component={NotFound} />
     </Switch>
   );
