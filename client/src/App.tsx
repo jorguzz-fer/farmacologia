@@ -11,7 +11,8 @@ import LandingPageV3 from "@/pages/LandingPageV3";
 function Router() {
   return (
     <Switch>
-      <Route path="/" component={LandingPage} />
+      <Route path="/" component={LandingPageV3} />
+      <Route path="/v1" component={LandingPage} />
       <Route path="/v2" component={LandingPageV2} />
       <Route path="/v3" component={LandingPageV3} />
       <Route component={NotFound} />
