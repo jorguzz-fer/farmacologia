@@ -19,6 +19,7 @@ import {
 import { Button } from "@/components/ui/button";
 import heroBg from "@assets/generated_images/abstract_scientific_background_with_blue_and_purple_gradients.png";
 import mentorPhoto from "@assets/generated_images/dr_kleber_real.png";
+import logoImage from "@assets/450x150_-_branco_1767465087558.png";
 
 const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -44,15 +45,11 @@ export default function LandingPageV3() {
                 <div className="container mx-auto px-4 md:px-6 relative z-10">
                     {/* Header Logo Area */}
                     <div className="flex justify-start mb-16 lg:mb-24">
-                        <div className="flex flex-col">
-                           <div className="flex items-center gap-2">
-                                <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-orange-400 rounded-lg flex items-center justify-center transform rotate-12">
-                                    <span className="text-white font-black text-xl italic">A</span>
-                                </div>
-                                <span className="text-3xl font-bold tracking-tight text-white">Alumine</span>
-                           </div>
-                           <span className="text-[10px] tracking-[0.2em] uppercase text-slate-400 font-medium ml-12 -mt-1">Farmacologia</span>
-                        </div>
+                        <img 
+                            src={logoImage} 
+                            alt="Alumine Farmacologia" 
+                            className="h-16 lg:h-24 w-auto object-contain"
+                        />
                     </div>
 
                     <div className="grid lg:grid-cols-12 gap-12 items-center max-w-7xl mx-auto">
