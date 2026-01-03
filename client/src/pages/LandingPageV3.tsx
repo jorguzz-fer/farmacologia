@@ -41,14 +41,14 @@ export default function LandingPageV3() {
         <div className="min-h-screen font-sans text-slate-100 overflow-x-hidden bg-[#030712]">
 
             {/* 1. HEADER/HERO SECTION */}
-            <section className="relative pt-10 pb-12 lg:pt-20 lg:pb-32 overflow-hidden bg-[#030712]">
+            <section className="relative pt-6 pb-12 lg:pt-20 lg:pb-32 overflow-hidden bg-[#030712]">
                 <div className="container mx-auto px-4 md:px-6 relative z-10">
                     {/* Header Logo Area */}
-                    <div className="flex justify-start mb-16 lg:mb-24">
+                    <div className="flex justify-center lg:justify-start mb-10 lg:mb-24">
                         <img 
                             src={logoImage} 
                             alt="Alumine Farmacologia" 
-                            className="h-16 lg:h-24 w-auto object-contain"
+                            className="h-12 sm:h-16 lg:h-24 w-auto object-contain"
                         />
                     </div>
 
@@ -59,20 +59,20 @@ export default function LandingPageV3() {
                             initial="hidden"
                             animate="visible"
                             variants={fadeInUp}
-                            className="lg:col-span-7 space-y-8 text-left"
+                            className="lg:col-span-7 space-y-6 md:space-y-8 text-center lg:text-left"
                         >
                             <div className="space-y-4">
-                                <h1 className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tight uppercase">
-                                    <span className="text-cyan-400">Farmacologia</span> <br />
+                                <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-white leading-[1.1] tracking-tight uppercase">
+                                    <span className="text-cyan-400">Farmacologia</span> <br className="hidden sm:block" />
                                     da Obesidade Moderna
                                 </h1>
 
-                                <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-xl">
+                                <p className="text-base sm:text-lg md:text-xl text-slate-300 leading-relaxed max-w-xl mx-auto lg:mx-0">
                                     Uma aula para profissionais da saúde que já conhecem GLP-1 e tirzepatida, mas ainda não entenderam por que a resposta clínica falha em tantos casos.
                                 </p>
                             </div>
 
-                            <div className="space-y-3 text-left">
+                            <div className="space-y-3 text-left inline-block w-full max-w-sm sm:max-w-none">
                                 {[
                                     "Entenda a resistência leptínica",
                                     "Domine o manejo de efeitos adversos",
@@ -80,26 +80,26 @@ export default function LandingPageV3() {
                                     "Prescrição ética e baseada em fenótipo"
                                 ].map((item, i) => (
                                     <div key={i} className="flex items-center gap-3">
-                                        <ArrowRightCircle className="w-5 h-5 text-cyan-400" />
-                                        <span className="text-base text-slate-200 font-medium leading-snug">{item}</span>
+                                        <ArrowRightCircle className="w-5 h-5 text-cyan-400 shrink-0" />
+                                        <span className="text-sm sm:text-base text-slate-200 font-medium leading-snug">{item}</span>
                                     </div>
                                 ))}
                             </div>
 
-                            <div className="space-y-6 pt-4">
+                            <div className="space-y-6 pt-2 md:pt-4">
                                 <div className="space-y-1">
-                                    <p className="text-2xl font-bold text-white line-through opacity-70">DE R$ 197,00</p>
-                                    <p className="text-4xl font-black text-orange-400">POR R$ 67,00</p>
+                                    <p className="text-xl sm:text-2xl font-bold text-white line-through opacity-70">DE R$ 197,00</p>
+                                    <p className="text-3xl sm:text-4xl font-black text-orange-400">POR R$ 67,00</p>
                                 </div>
 
-                                <div className="relative group w-fit">
+                                <div className="relative group w-full sm:w-fit flex justify-center lg:justify-start">
                                     <div className="absolute -inset-1 bg-cyan-400/50 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
-                                    <Button className="relative h-14 px-12 text-lg bg-cyan-400 hover:bg-cyan-300 text-[#030712] font-black rounded-full shadow-2xl transition-all">
+                                    <Button className="relative h-14 px-12 text-lg bg-cyan-400 hover:bg-cyan-300 text-[#030712] font-black rounded-full shadow-2xl transition-all w-full sm:w-auto">
                                         COMEÇAR AGORA
                                     </Button>
                                 </div>
 
-                                <p className="text-[10px] text-slate-500 max-w-[300px] leading-tight italic">
+                                <p className="text-[10px] text-slate-500 max-w-[300px] leading-tight italic mx-auto lg:mx-0">
                                     Ao clicar no botão para se inscrever, você concorda com a nossa <a href="#" className="underline">Política de Privacidade</a>.
                                 </p>
                             </div>
