@@ -1,0 +1,119 @@
+Crie uma landing page moderna e profissional para o curso online "Farmacologia da Obesidade Moderna" com as seguintes especificações: ESTRUTURA E SEÇÕES
+
+Html, Jscript, SEO aplicado
+
+HERO SECTION (Above the fold)
+Headline principal: "Farmacologia da Obesidade Moderna" Subtítulo: "GLP-1, GIP, apneia e a nova fronteira do tratamento metabólico" Subheadline com tensão cognitiva: "Uma aula para profissionais da saúde que já conhecem GLP-1 e tirzepatida, mas ainda não entenderam por que a resposta clínica falha em tantos casos." Botão CTA principal: "Acessar o Curso por R$ 67" Design: Fundo gradiente moderno (tons de azul/roxo científico), tipografia clara e hierárquica
+
+SEÇÃO: QUEBRA DE PARADIGMA Título: "Por que a farmacologia sozinha não explica tudo?" Apresentar em cards visuais os 4 questionamentos:
+Por que alguns pacientes respondem muito bem e outros não Por que o reganho de peso é tão frequente Por que aumentar a dose nem sempre resolve Por que novas moléculas mais potentes ainda encontram limites
+
+Conclusão em destaque:
+
+"👉 O problema não é falta de fármaco." "👉 O problema não é falta de entendimento do fenômeno biológico." "Este conteúdo foi criado para corrigir esse raciocínio."
+
+SEÇÃO: O QUE ESTE PRODUTO É (E NÃO É) Layout em duas colunas: Coluna 1 - "Não é:" (com ícone X vermelho)
+Um curso operacional sobre canetas Um treinamento de prescrição passo a passo Um compilado de bulas comentadas Um produto focado em estética ou emagrecimento rápido
+
+Coluna 2 - "É:" (com ícone check verde)
+
+Uma base conceitual sólida sobre obesidade como doença metabólica moderna Uma leitura farmacológica integrada (SNC, inflamação, metabolismo) Um guia para entender por que a farmacologia funciona — e por que falha Um ponto de partida obrigatório antes de qualquer aplicação prática avançada
+
+SEÇÃO: PARA QUEM É Título: "Este conteúdo foi desenvolvido para:" Grid de cards com ícones profissionais:
+Médicos Farmacêuticos Nutricionistas Biomédicos Odontologistas Estudantes de Graduação Profissionais da saúde Pessoas que buscam entendimento, não atalhos
+
+SEÇÃO: O QUE VOCÊ VAI APRENDER Título: "Ao acessar este conteúdo, você vai compreender:" Lista com checkmarks em design elegante:
+Obesidade como doença adaptativa, inflamatória e neuroendócrina O papel real do SNC, da recompensa alimentar e do food noise Como GLP-1 atua além do estômago Por que o GIP foi subestimado — e quais são seus limites Por que a tirzepatida é mais potente, mas não infalível A relação entre obesidade, inflamação e apneia do sono O que explica biologicamente o reganho de peso O impacto da perda de massa magra no fracasso terapêutico Para onde caminha a farmacologia com os agonistas triplos
+
+Nota final: "Tudo isso sem transformar o conteúdo em bula ou aula técnica fragmentada." 6. SEÇÃO: MÓDULOS DO CURSO Título: "Estrutura do Conteúdo" Subtítulo: "Módulos organizados com raciocínio progressivo" Accordion ou cards expansíveis numerados de 1 a 10:
+
+Obesidade como doença adaptativa, inflamatória e neuroendócrina
+
+Set point metabólico • Inflamação crônica de baixo grau • Adipócito como célula imunometabólica • Relação obesidade ↔ resistência leptínica
+
+SNC, comportamento alimentar e imunoneuromodulação
+
+Hipotálamo, tronco encefálico, nervo vago • Dopamina, recompensa alimentar • Neuroinflamação hipotalâmica • Food noise como fenômeno neurobiológico
+
+Classes farmacológicas no tratamento da obesidade
+
+Agonistas de GLP-1 • Agonistas duais GLP-1/GIP • Combinações farmacológicas • O que muda entre classe ≠ molécula
+
+GLP-1 em profundidade: metabolismo, SNC e inflamação
+
+Ação periférica e central • Efeitos anti-inflamatórios • Impacto cardiovascular, renal e metabólico • GLP-1 como modulador sistêmico
+
+GIP, tirzepatida e os limites moleculares da terapia
+
+Sinergia GLP-1/GIP • Por que a tirzepatida funciona mais • Limites adaptativos • Downregulation e tolerância funcional
+
+Apneia do sono como fenótipo imunometabólico
+
+Relação bidirecional: Apneia ↔ inflamação • Apneia ↔ resistência insulínica • Por que GLP-1/GIP melhoram apneia indiretamente
+
+Massa magra, metabolismo e adaptação
+
+Perda de massa magra • Inflamação e resistência anabólica • Sarcopenia metabólica • Risco do emagrecimento rápido
+
+Reganho de peso como resposta biológica previsível
+
+Defesa do set point • Reversão de marcadores metabólicos e inflamatórios • Por que o corpo "lembra" do peso
+
+A nova fronteira: agonistas triplos e o futuro do tratamento
+
+Agonistas GLP-1/GIP/Glucagon • O que eles prometem resolver • Limites biológicos mesmo com triplos agonistas
+
+Prescrição ética e estratégica baseada em fenótipo
+
+Para quem prescrever • Para quem NÃO prescrever • Quando manter • Quando interromper
+
+SEÇÃO: CONHEÇA SEU MENTOR - DR. KLEBER FERREIRA Título: "Conheça seu mentor" Subtítulo: "Dr. Kleber Ferreira" Layout: Foto profissional do Dr. Kleber à esquerda (ou acima em mobile), texto à direita (ou abaixo em mobile) Texto (dividido em blocos visuais): Bloco 1 - Introdução: "Comecei do zero. Depois de quase 18 anos construindo negócios, minhas empresas faturam mais de R$ 200 milhões em valor gerado para clientes e para mim. Não foi por sorte. Foi por método. Implementei em mim mesmo o modelo que hoje você aprenderá. Cada erro que cometi, cada estrutura que criei, cada escala que atravessei – tudo virou sistema." Bloco 2 - Proposta de valor: "Hoje meu trabalho é acelerar sua curva de aprendizado. Você não precisa cometer os 100 erros que eu cometi. Você pode aprender do modelo que funcionou." Bloco 3 - Credenciais acadêmicas (com badges/selos visuais):
+✓ Reconhecido pelo DNA USP ✓ Apoiado por FAPESP, CNPq e SEBRAE ✓ Acadêmico titular da Academia Nacional de Farmácia
+
+"Organizações que validam metodologia e resultado real, não promessas." Bloco 4 - Experiência empresarial: "Sou sócio-diretor do maior laboratório veterinário do Brasil (Alchemypet) e sócio-CFO de laboratório de genética (BioMedDNA)." Bloco 5 - Resultados (em destaque com números grandes): "Mas aqui está o que importa: → Já estruturei mais de R$ 200 milhões em valor para clientes → Minhas empresas faturam mais de R$ 80 milhões acumulados → Aplico o mesmo modelo nos meus negócios e nas empresas que mentoro" Bloco 6 - Fechamento: "Eu vivo o que ensino. Todos os dias." Rodapé da seção: "Alumine GrowthMinds" 8. SEÇÃO: DETALHES DO ACESSO Título: "Como funciona o acesso" 4 cards com ícones:
+
+📹 Conteúdo gravado ⚡ Acesso imediato ♾️ Acesso contínuo ⏱️ Assista no seu ritmo
+
+Destaque do investimento: Grande box centralizado: "R$ 67" 9. SEÇÃO: GARANTIA Box com borda destacada: "Você tem 7 dias de garantia incondicional. Se este conteúdo não elevar seu entendimento sobre a farmacologia da obesidade, o valor é devolvido integralmente." 10. CTA FINAL Seção com fundo contrastante:
+
+Botão grande e destacado: "👉 Acessar Farmacologia da Obesidade Moderna por R$ 67" Texto de apoio: "Acesso imediato • Garantia de 7 dias"
+
+ESPECIFICAÇÕES TÉCNICAS Design:
+
+Paleta de cores: Azul profissional (#1e3a8a, #3b82f6), roxo científico (#7c3aed), branco (#ffffff), cinza claro (#f3f4f6) Tipografia:
+
+Headlines: fonte moderna sans-serif, weight 700-900 Corpo: fonte legível, weight 400-500 Tamanhos responsivos
+
+Espaçamento: Generoso entre seções (80-120px) Animações sutis: Fade-in ao scroll, hover effects nos botões
+
+Seção do Mentor - Especificações adicionais:
+
+Foto: Círculo ou quadrado com bordas arredondadas, dimensão mínima 400x400px Badges/Selos: Ícones para USP, FAPESP, CNPq, SEBRAE, Academia Nacional de Farmácia Números em destaque: R$ 200 milhões e R$ 80 milhões em tipografia maior e cor de destaque Background: Fundo levemente diferenciado (cinza muito claro ou gradiente sutil)
+
+Responsividade:
+
+Mobile-first approach Breakpoints: 640px, 768px, 1024px, 1280px Navegação hamburger em mobile CTAs fixos em mobile (sticky button) Seção do mentor: foto acima do texto em mobile, lado a lado em desktop
+
+Elementos visuais:
+
+Ícones line-style modernos Cards com sombras sutis Gradientes suaves em backgrounds Foto profissional do Dr. Kleber Ferreira Badges/selos institucionais
+
+Otimizações:
+
+Fast loading SEO-friendly structure Meta tags apropriadas (incluir Dr. Kleber Ferreira como autor) Schema markup para curso online e person (Dr. Kleber)
+
+Acessibilidade:
+
+Contraste adequado (WCAG AA) Alt texts (incluir alt text descritivo para foto do Dr. Kleber) Navegação por teclado Aria labels
+
+FUNCIONALIDADES
+
+Botão CTA deve estar presente em:
+
+Hero section (topo) Após a seção de módulos Após a seção do mentor CTA final (bottom)
+
+Todos os CTAs devem ter tracking/analytics preparado Smooth scroll entre seções Modal ou link direto para checkout (preparar estrutura)
+
+IMPORTANTE: O tom deve ser profissional, científico, mas acessível. A seção do mentor deve transmitir autoridade através de resultados concretos e credenciais, sem arrogância. O design deve transmitir seriedade científica com modernidade visual e credibilidade empresarial.
+
+Show less
