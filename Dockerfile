@@ -37,6 +37,7 @@ ENV PORT=5000
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/v5 ./v5
+COPY --from=builder /app/v6 ./v6
 
 # Copy production node_modules
 COPY --from=builder /app/node_modules ./node_modules
